@@ -19,6 +19,13 @@ module.exports = function(sequelize, dataTypes) {
     }
     
     let Genero = sequelize.define(alias, cols, config);
+
+    Genero.associate = function(models) {
+        Genero.hasMany(models.Pelicula, {
+            as: "peliculas",
+            foreignKey: "genre_id"
+        });
+    }
     
     return Genero;
 }
