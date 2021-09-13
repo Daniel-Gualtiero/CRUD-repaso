@@ -5,7 +5,7 @@ let peliculasController = {
     crear: function(req, res) {
         db.Genero.findAll()
         .then(function(generos) {
-            return res.render("listadoPeliculas", {generos:generos});
+            return res.render("crearPeliculas", {generos:generos});
         })
     }
 }
