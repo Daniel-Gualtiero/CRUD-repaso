@@ -4,6 +4,10 @@ var router = express.Router();
 var peliculasController = require("../controllers/peliculasController")
 
 //creación de película
-router.get("/crear", peliculasController.crear)
+router.get("/crear", peliculasController.crear);
+router.post("/crear", peliculasController.guardado);
+
+//Lectura
+router.get("/", peliculasController.listado);
 
 module.exports = router;

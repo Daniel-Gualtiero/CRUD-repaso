@@ -1,6 +1,6 @@
 <%- include('header')-%>
     <h1>Crear pelicula</h1>
-    <form action="peliculas/crear" method="POST">
+    <form action="/peliculas/crear" method="POST">
         <div>
             <label for=""> Título </label>
             <input type="text" name="titulo">
@@ -11,7 +11,7 @@
         </div>
         <div>
             <label for=""> Duración </label>
-            <input type="text" name="length">
+            <input type="text" name="duracion">
         </div>
         <div>
             <label for=""> Rating </label>
@@ -19,7 +19,7 @@
         </div>
         <div>
             <label for=""> Fecha de estreno </label>
-            <input type="date" name="release_date">
+            <input type="date" name="fecha_estreno">
         </div>
         <div>
             <label for=""> Genero  </label>
@@ -31,6 +31,7 @@
                 <% } %>
             </select>            
         </div>
+        <button type="submit"> Crear </button>
 
 
 <%- include('footer')-%>
