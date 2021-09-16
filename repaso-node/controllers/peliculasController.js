@@ -17,6 +17,10 @@ let peliculasController = {
             length: req.body.duracion,
             rating: req.body.rating
         });
+        db.Actor.create({
+            first_name: req.body.first_name,
+            last_name: req.body.last_name,            
+        });
 
         res.redirect('/peliculas');
     },
